@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon_entropiccat_blackhole.png">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link type="text/css" rel="stylesheet" href="css/tailwind.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="css/custom_mail.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contáctanos</title>
+  </head>
+  <body>
+
+    <div class="navbar">
+        <img src="img/favicon_entropiccat_blackhole.png" alt="">
+        <h3 class="titulo">Entropic Cat University</h3>
+        <a href="index.html"><i class="fa fa-arrow-left right ml-3"></i> Inicio</a>
+    </div>
+
+    <div class="container mx-auto mt-20 bg-white">
+        <header id="header" class="bg-orange-800 p-3 font-bold">
+            Contacto
+        </header>
+
+        <form id="enviar-mail" class="py-5 px-5 max-w-lg mx-auto">
+            <div class="mb-5">
+                <label for="email">Para:</label>
+                <input class="bg-gray-100 border shadow p-3 w-full"  id="email" type="email">
+            </div>
+            <div class="mb-5">
+                <label for="asunto">Asunto</label>
+                <input class="bg-gray-100 border shadow p-3 w-full"  id="asunto" type="text">
+            </div>
+            <div class="mb-5"> 
+                <label for="mensaje">Mensaje</label>
+                <textarea class="bg-gray-100 border shadow p-3 w-full" id="mensaje"></textarea>
+            </div>
+
+            <div  id="spinner">
+                <div class="sk-chase">
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                </div>
+            </div>
+            
+            <div class="flex justify-between">
+                    <button 
+                        id="enviar" class="w-full bg-orange-600 px-2 py-5 text-white items-center cursor-not-allowed opacity-50 mr-5 uppercase font-bold items-center flex justify-center" 
+                        type="submit" 
+                    >Enviar
+                        <i class="fa fa-mail-bulk right text-white ml-3">Enviar</i>
+                    </button>
+
+                    <button 
+                        id="resetBtn" 
+                        class="w-full bg-orange-400 px-2 py-5 text-white items-center uppercase font-bold items-center flex justify-center" 
+                        type="button"
+                    >Resetear Form
+                        <i class="fa fa-close right ml-3">Limpiar</i>
+                    </button>
+            </div>
+        </form> 
+    </div>
+
+    <script src="js/app_mail.js"></script>
+    <script src="js/all.min.js"></script>
+  </body>
+</html>
+      
