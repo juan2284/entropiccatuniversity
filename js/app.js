@@ -10,7 +10,13 @@ let articulosCarrito = [];
 // Listeners
 cargarEventListeners();
 function cargarEventListeners(){
-  document.addEventListener('DOMContentLoaded', obtenerCursos);
+  document.addEventListener('DOMContentLoaded', () => {
+    obtenerCursos();
+
+    articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    carritoHTML();
+  });
 
   // Cuando agregas un curso presionando el botón "Agregar al Carrito"
   listaCursos.addEventListener('click', agregarCurso);
@@ -147,6 +153,13 @@ function carritoHTML(){
     // Agrega el HTML del carrito en el tbody
     contenedorCarrito.appendChild(row);
   });
+
+  // Agregar el carrito de compras al storage
+  sincronizarStorage();
+}
+
+function sincronizarStorage(){
+  localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
 }
 
 // Elimina los cursos del tbody
